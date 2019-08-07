@@ -15,6 +15,9 @@
 		00179BF122F55377000DD199 /* OwlEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00179BF022F55377000DD199 /* OwlEnglishTests.swift */; };
 		00179BFC22F55377000DD199 /* OwlEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00179BFB22F55377000DD199 /* OwlEnglishUITests.swift */; };
 		00D635DA22F6B814007362E1 /* TransDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D635D922F6B814007362E1 /* TransDatas.swift */; };
+		00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */; };
+		00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */; };
+		00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4F022F98DBB00C464D8 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		00179BFB22F55377000DD199 /* OwlEnglishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwlEnglishUITests.swift; sourceTree = "<group>"; };
 		00179BFD22F55377000DD199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00D635D922F6B814007362E1 /* TransDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDatas.swift; sourceTree = "<group>"; };
+		00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKorean.swift; sourceTree = "<group>"; };
+		00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishNoteViewController.swift; sourceTree = "<group>"; };
+		00DCA4F022F98DBB00C464D8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				00179BE222F55377000DD199 /* Assets.xcassets */,
 				00179BE422F55377000DD199 /* LaunchScreen.storyboard */,
 				00179BE722F55377000DD199 /* Info.plist */,
+				00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */,
+				00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */,
+				00DCA4F022F98DBB00C464D8 /* Data.swift */,
 			);
 			path = OwlEnglish;
 			sourceTree = "<group>";
@@ -260,8 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00179BDE22F55376000DD199 /* ViewController.swift in Sources */,
+				00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */,
 				00179BDC22F55376000DD199 /* AppDelegate.swift in Sources */,
+				00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */,
 				00D635DA22F6B814007362E1 /* TransDatas.swift in Sources */,
+				00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
