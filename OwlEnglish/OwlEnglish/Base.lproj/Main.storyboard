@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="240.57971014492756" y="128.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--English Exam-->
         <scene sceneID="TcV-8n-Tfs">
             <objects>
-                <viewController id="rXc-bz-oUB" sceneMemberID="viewController">
+                <viewController id="rXc-bz-oUB" customClass="EnglishExam" customModule="OwlEnglish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wer-48-LZc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,21 +76,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yN-75-XuF">
-                                <rect key="frame" x="96" y="611" width="39" height="30"/>
+                                <rect key="frame" x="97" y="778" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="외웠다"/>
+                                <connections>
+                                    <action selector="knowButton:" destination="rXc-bz-oUB" eventType="touchUpInside" id="7Fu-cz-Qfn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dx-gu-uM3">
-                                <rect key="frame" x="269" y="611" width="52" height="30"/>
+                                <rect key="frame" x="277" y="778" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="모르겠다"/>
+                                <connections>
+                                    <action selector="dontKnowButton:" destination="rXc-bz-oUB" eventType="touchUpInside" id="yZs-gr-04U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="pdQ-Tp-hsE"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pQ7-HA-CMc" appends="YES" id="waR-TY-9tD"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="presentExamText" destination="LbV-5G-g1v" id="ETL-uX-q8a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVk-ye-wAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pQ7-HA-CMc">
+                    <connections>
+                        <action selector="tapAction:" destination="rXc-bz-oUB" id="ZR2-X4-r9R"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="241" y="863"/>
         </scene>
