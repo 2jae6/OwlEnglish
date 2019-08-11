@@ -19,6 +19,7 @@
 		00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */; };
 		00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */; };
 		00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4F022F98DBB00C464D8 /* Data.swift */; };
+		00EE3B6222FFE46000C2015D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE3B6122FFE46000C2015D /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKorean.swift; sourceTree = "<group>"; };
 		00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishNoteViewController.swift; sourceTree = "<group>"; };
 		00DCA4F022F98DBB00C464D8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		00EE3B6122FFE46000C2015D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		00179BDA22F55376000DD199 /* OwlEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				00EE3B6122FFE46000C2015D /* SecondViewController.swift */,
 				00D635D922F6B814007362E1 /* TransDatas.swift */,
 				00179BDB22F55376000DD199 /* AppDelegate.swift */,
 				00179BDD22F55376000DD199 /* ViewController.swift */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EE3B6222FFE46000C2015D /* SecondViewController.swift in Sources */,
 				00179BDE22F55376000DD199 /* ViewController.swift in Sources */,
 				00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */,
 				00179BDC22F55376000DD199 /* AppDelegate.swift in Sources */,

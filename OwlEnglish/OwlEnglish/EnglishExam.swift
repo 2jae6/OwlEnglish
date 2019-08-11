@@ -12,7 +12,11 @@ import SQLite3
 class EnglishExam: UIViewController{
     
     //IBOUTLET
+    
+    @IBOutlet weak var knowButtonOutlet: UIButton!
     @IBOutlet weak var presentExamText: UILabel!
+    
+    @IBOutlet weak var dontKnowButtonOutlet: UIButton!
     var db: OpaquePointer?
     var dataList = [Data]()
     var rowsu: Int?
@@ -43,6 +47,8 @@ class EnglishExam: UIViewController{
         //////////0일경우
         if rowsu == 0{
             presentExamText.text = "전부 외우셨습니다. 꼭 다시 복습하세요!!!"
+            knowButtonOutlet.isEnabled = false
+            dontKnowButtonOutlet.isEnabled = false
         }else{
         ///////////////////// 0이 아닐경우
         randomFunction()
@@ -63,7 +69,7 @@ class EnglishExam: UIViewController{
     @IBAction func tapAction(_ sender: Any) {
         let Data: Data
         Data = dataList[randomsu!]
-        presentExamText?.text = ("\(Data.DB_English!)  \(Data.DB_Korean!)")
+        presentExamText?.text = ("\(Data.DB_English!) \n \(Data.DB_Korean!)")
     }
     
     

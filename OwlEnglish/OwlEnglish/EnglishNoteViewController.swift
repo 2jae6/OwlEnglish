@@ -13,7 +13,7 @@ import SQLite3
 class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableViewDataSource{
     var db: OpaquePointer?
     var dataList = [Data]()
-    
+    var deleteNum: Int?
     @IBOutlet weak var myEnglishTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,19 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
         
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let Data: Data
+        Data = dataList[indexPath.row]
+        deleteNum = Data.id
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            dataList.remove(at: indexPath.row)
+            myEnglishTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            deleteData()
+        }
+        
+    }
     //Custom Method
     //DB열기
     func opendb(){
@@ -51,7 +64,29 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
             print("DB 열기 실패222")
         }
     }
-    
+    func deleteData(){
+        //first empty the list of Test
+        dataList.removeAll()
+        //this is our select query
+        let queryString = "DELETE FROM MyEnglish WHERE id == \(deleteNum!)"
+        //statement pointer
+        var stmt:OpaquePointer?
+        //preparing the query
+        if sqlite3_prepare(db, queryString, -1, &stmt, nil) != SQLITE_OK{
+            let errmsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing insert:v2 \(errmsg)")
+            return
+        }
+        while(sqlite3_step(stmt) == SQLITE_ROW){
+            let id = sqlite3_column_int(stmt, 0)
+            let DB_English = String(cString: sqlite3_column_text(stmt, 1))
+            let DB_Korean = String(cString: sqlite3_column_text(stmt, 2))
+            //adding values to list
+            dataList.append(Data(id: Int(id), DB_English: String(describing: DB_English), DB_Korean: String(describing: DB_Korean)))
+        }
+        readValues()
+        
+    }
     func readValues(){
         //first empty the list of Test
         dataList.removeAll()
@@ -67,7 +102,6 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
             print("error preparing insert:v1 \(errmsg)")
             return
         }
-        
         //traversing through all the records
         while(sqlite3_step(stmt) == SQLITE_ROW){
             let id = sqlite3_column_int(stmt, 0)

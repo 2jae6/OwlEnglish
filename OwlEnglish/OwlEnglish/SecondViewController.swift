@@ -1,14 +1,16 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  OwlEnglish
 //
-//  Created by 1 on 03/08/2019.
+//  Created by 1 on 11/08/2019.
 //  Copyright © 2019 wook. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SQLite3
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -16,23 +18,24 @@ class ViewController: UIViewController {
     
     //변수들
     @IBOutlet weak var searchText: UITextField!
-    @IBOutlet weak var resultKoreanText: UITextView!
+    @IBOutlet weak var resultEnglishText: UITextView!
     var db: OpaquePointer?
+    
     
     
     //IBAction
     @IBAction func searchButton(_ sender: Any) {
         callURL()
     }
-    
     @IBAction func saveTextButton(_ sender: Any) {
         //데이터 베이스 생성
         opendb()
         insertdb()
+        
+        
     }
     
-//Custom method
-    
+    //Custom method
     
     func saveAlert(){
         let alert = UIAlertController(title: "성공", message: "나의 단어장으로 저장 완료!", preferredStyle: UIAlertController.Style.alert)
@@ -47,14 +50,14 @@ class ViewController: UIViewController {
     func callURL(){
         
         let text = searchText.text!
-        let param = "source=en&target=ko&text=\(text)"
+        let param = "source=ko&target=en&text=\(text)"
         let paramData = param.data(using: .utf8)
         let Naver_URL = URL(string: "https://openapi.naver.com/v1/language/translate")
         //💥💥💥💥본인의 Naver 애플리케이션 정보를 작성!!!💥💥💥💥
         let ClientID = "D2VwCGcCJLXOXYb8dDFB"
         let ClientSecret = "g6aFZkv08R"
-
-  
+        
+        
         //Request
         var request = URLRequest(url: Naver_URL!)
         request.httpMethod = "POST"                 //Naver 도서 API는 GET
@@ -79,11 +82,11 @@ class ViewController: UIViewController {
                     let decoder = JSONDecoder()
                     let data = str.data(using: .utf8)
                     if let data = data, let TransDatas = try? decoder.decode(Welcome.self, from: data) {
-                        self.resultKoreanText.text = TransDatas.message.result.translatedText
+                        self.resultEnglishText.text = TransDatas.message.result.translatedText
                     }
                     /////////////////////////////////////////////////////////////////////////////////////
-                    }
                 }
+            }
             //////////
             //통신 실패
             if let error = error {
@@ -107,8 +110,8 @@ class ViewController: UIViewController {
         }
     }
     func insertdb(){
-        let DB_English = searchText.text?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let DB_Korean = resultKoreanText.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let DB_English = resultEnglishText.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let DB_Korean = searchText.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         //텍스트 필드의 값이 빈 경우의 처리
         if(DB_English?.isEmpty)!{
             return
@@ -150,7 +153,7 @@ class ViewController: UIViewController {
             print("삽입하는데 실패했다: \(errmsg)")
             return
         }
-
+        
         //displaying a success message
         print("Test saved successfully")
         saveAlert()
