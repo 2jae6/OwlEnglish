@@ -32,8 +32,6 @@ class ViewController: UIViewController {
     }
     
 //Custom method
-    
-    
     func saveAlert(){
         let alert = UIAlertController(title: "성공", message: "나의 단어장으로 저장 완료!", preferredStyle: UIAlertController.Style.alert)
         

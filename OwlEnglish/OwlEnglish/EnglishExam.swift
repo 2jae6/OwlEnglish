@@ -12,11 +12,10 @@ import SQLite3
 class EnglishExam: UIViewController{
     
     //IBOUTLET
-    
     @IBOutlet weak var knowButtonOutlet: UIButton!
     @IBOutlet weak var presentExamText: UILabel!
-    
     @IBOutlet weak var dontKnowButtonOutlet: UIButton!
+    @IBOutlet var tapActionOutlet: UITapGestureRecognizer!
     var db: OpaquePointer?
     var dataList = [Data]()
     var rowsu: Int?
@@ -33,8 +32,12 @@ class EnglishExam: UIViewController{
         
         naonsu = randomsu!
         let Data: Data
+        if rowsu == 0{
+            presentExamText.text = "단어장에 단어를 먼저 추가하세요."
+        }else{
         Data = dataList[randomsu!]
         presentExamText.text = Data.DB_English
+        }
     }
     
 
@@ -67,9 +70,13 @@ class EnglishExam: UIViewController{
     }
     
     @IBAction func tapAction(_ sender: Any) {
+        if rowsu == 0{
+            tapActionOutlet.isEnabled = false
+        }else{
         let Data: Data
         Data = dataList[randomsu!]
         presentExamText?.text = ("\(Data.DB_English!) \n \(Data.DB_Korean!)")
+        }
     }
     
     
