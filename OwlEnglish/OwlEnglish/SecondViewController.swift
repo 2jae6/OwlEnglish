@@ -46,6 +46,15 @@ class SecondViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: false, completion: nil)
     }
+    func insertAlert(){
+        let alert = UIAlertController(title: "실패", message: "단어를 입력해주세요!", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: .destructive) { (action) in
+            
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
+    }
     //API 불러오기
     func callURL(){
         
@@ -114,9 +123,11 @@ class SecondViewController: UIViewController {
         let DB_Korean = searchText.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         //텍스트 필드의 값이 빈 경우의 처리
         if(DB_English?.isEmpty)!{
+            insertAlert()
             return
         }
         if(DB_Korean?.isEmpty)!{
+            insertAlert()
             return
         }
         

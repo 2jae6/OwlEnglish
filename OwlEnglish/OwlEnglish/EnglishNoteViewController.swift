@@ -21,6 +21,21 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
         readValues()
     }
     
+    
+    
+    @IBAction func addVocaButton(_ sender: Any) {
+        // 화면을 전환할 뷰 컨트롤러 객체를 스토리보드에서 Storyboard ID 정보를 이용하여 읽어온다
+        if let uvc = self.storyboard?.instantiateViewController(withIdentifier: "addVC") {
+            // 화면을 전환할 때 애니메이션 정의
+            uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            // 인자값으로 받은 뷰 컨트롤러로 화면 이동
+            self.present(uvc, animated: true)
+        }
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count
     }

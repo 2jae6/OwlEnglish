@@ -29,6 +29,9 @@ class DirectSave:UIViewController{
         insertdb()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+         self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     
     //Custom Method
     //DB열기
@@ -41,7 +44,15 @@ class DirectSave:UIViewController{
         alert.addAction(okAction)
         present(alert, animated: false, completion: nil)
     }
-    
+    func insertAlert(){
+        let alert = UIAlertController(title: "실패", message: "단어를 입력해주세요!", preferredStyle: UIAlertController.Style.alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: .destructive) { (action) in
+            
+        }
+        alert.addAction(okAction)
+        present(alert, animated: false, completion: nil)
+    }
     func opendb(){
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("MyEnglishDatabase.sqlite")
         
@@ -55,9 +66,11 @@ class DirectSave:UIViewController{
         let DB_Korean = koreanTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         //텍스트 필드의 값이 빈 경우의 처리
         if(DB_English?.isEmpty)!{
+            insertAlert()
             return
         }
         if(DB_Korean?.isEmpty)!{
+            insertAlert()
             return
         }
         
