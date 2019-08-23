@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RVL-gU-Piq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIy-qm-WTh">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,83 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="GeQ-eH-chx">
-            <objects>
-                <viewController id="LYD-PH-l4Y" customClass="MainViewController" customModule="OwlEnglish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1xk-87-aMu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXu-pE-0nU">
-                                <rect key="frame" x="50" y="114" width="132" height="261"/>
-                                <state key="normal" title="단어장보기">
-                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="myEnglishButton:" destination="LYD-PH-l4Y" eventType="touchUpInside" id="cr5-ZF-Yfw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urM-ah-9wN">
-                                <rect key="frame" x="232" y="114" width="132" height="261"/>
-                                <state key="normal" title="시험보기">
-                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rXc-bz-oUB" kind="show" id="hXb-Mb-SS1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMV-Rd-OBR">
-                                <rect key="frame" x="50" y="425" width="132" height="261"/>
-                                <state key="normal" title="영어로 검색하기">
-                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="o4I-9T-0Lc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-a2-zPK">
-                                <rect key="frame" x="232" y="425" width="132" height="261"/>
-                                <state key="normal" title="한글로 검색하기">
-                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n7R-Cn-xLU" kind="show" id="Xmc-cE-ab4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="si1-wx-AN3" firstAttribute="bottom" secondItem="xzf-a2-zPK" secondAttribute="bottom" constant="50" id="5ag-Y7-aXV"/>
-                            <constraint firstItem="LXu-pE-0nU" firstAttribute="top" secondItem="si1-wx-AN3" secondAttribute="top" constant="50" id="704-rL-CHv"/>
-                            <constraint firstItem="si1-wx-AN3" firstAttribute="trailing" secondItem="xzf-a2-zPK" secondAttribute="trailing" constant="50" id="CPP-Dg-rT2"/>
-                            <constraint firstItem="urM-ah-9wN" firstAttribute="width" secondItem="LXu-pE-0nU" secondAttribute="width" id="CfB-jh-m3Y"/>
-                            <constraint firstItem="urM-ah-9wN" firstAttribute="leading" secondItem="LXu-pE-0nU" secondAttribute="trailing" constant="50" id="ISm-9Y-FIO"/>
-                            <constraint firstItem="urM-ah-9wN" firstAttribute="top" secondItem="si1-wx-AN3" secondAttribute="top" constant="50" id="Oy6-lV-6cs"/>
-                            <constraint firstItem="LMV-Rd-OBR" firstAttribute="width" secondItem="LXu-pE-0nU" secondAttribute="width" id="SI4-my-tze"/>
-                            <constraint firstItem="xzf-a2-zPK" firstAttribute="leading" secondItem="LMV-Rd-OBR" secondAttribute="trailing" constant="50" id="Snz-V5-3Yp"/>
-                            <constraint firstItem="LMV-Rd-OBR" firstAttribute="leading" secondItem="si1-wx-AN3" secondAttribute="leading" constant="50" id="Sog-Cd-wWN"/>
-                            <constraint firstItem="xzf-a2-zPK" firstAttribute="width" secondItem="LXu-pE-0nU" secondAttribute="width" id="Tdw-ao-cd9"/>
-                            <constraint firstItem="xzf-a2-zPK" firstAttribute="height" secondItem="LXu-pE-0nU" secondAttribute="height" id="Zap-aX-aXD"/>
-                            <constraint firstItem="LMV-Rd-OBR" firstAttribute="height" secondItem="LXu-pE-0nU" secondAttribute="height" id="f3f-LD-C28"/>
-                            <constraint firstItem="xzf-a2-zPK" firstAttribute="top" secondItem="urM-ah-9wN" secondAttribute="bottom" constant="50" id="jeJ-hV-JQk"/>
-                            <constraint firstItem="si1-wx-AN3" firstAttribute="trailing" secondItem="urM-ah-9wN" secondAttribute="trailing" constant="50" id="lHo-v5-I1f"/>
-                            <constraint firstItem="LMV-Rd-OBR" firstAttribute="top" secondItem="LXu-pE-0nU" secondAttribute="bottom" constant="50" id="oEl-il-i0X"/>
-                            <constraint firstItem="LXu-pE-0nU" firstAttribute="leading" secondItem="si1-wx-AN3" secondAttribute="leading" constant="50" id="ql1-vR-rOu"/>
-                            <constraint firstItem="si1-wx-AN3" firstAttribute="bottom" secondItem="LMV-Rd-OBR" secondAttribute="bottom" constant="50" id="qxL-pu-nOc"/>
-                            <constraint firstItem="urM-ah-9wN" firstAttribute="height" secondItem="LXu-pE-0nU" secondAttribute="height" id="zM3-g3-SuI"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="si1-wx-AN3"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2LA-WA-pcx"/>
-                    <connections>
-                        <outlet property="examButtonOutlet" destination="urM-ah-9wN" id="Ru0-OR-Lgo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lF3-wk-yn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="239.13043478260872" y="127.17391304347827"/>
-        </scene>
         <!--English Exam-->
         <scene sceneID="TcV-8n-Tfs">
             <objects>
@@ -96,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dx-gu-uM3">
-                                <rect key="frame" x="247" y="656" width="87" height="30"/>
+                                <rect key="frame" x="247" y="612" width="87" height="30"/>
                                 <state key="normal" title="모르겠다"/>
                                 <connections>
                                     <action selector="dontKnowButton:" destination="rXc-bz-oUB" eventType="touchUpInside" id="yZs-gr-04U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yN-75-XuF">
-                                <rect key="frame" x="80" y="656" width="87" height="30"/>
+                                <rect key="frame" x="80" y="612" width="87" height="30"/>
                                 <state key="normal" title="외웠다"/>
                                 <connections>
                                     <action selector="knowButton:" destination="rXc-bz-oUB" eventType="touchUpInside" id="7Fu-cz-Qfn"/>
@@ -161,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqG-Wo-VHM">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="단어 추가" id="dXl-nX-OBF">
                                         <barButtonItem key="leftBarButtonItem" title="뒤로가기" id="VJT-H0-omr">
@@ -334,8 +257,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cYJ-4B-PaN">
-                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="584"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="9fg-S6-fxc">
+                                    <rect key="frame" x="0.0" y="72" width="414" height="75"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="4ga-yn-Rlx">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -352,14 +279,9 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bv-86-8l3">
-                                <rect key="frame" x="0.0" y="20" width="0.0" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="단어장" id="eSP-bj-mYJ">
-                                        <barButtonItem key="leftBarButtonItem" title="뒤로가기" id="1EJ-iL-57a">
-                                            <connections>
-                                                <action selector="backButton:" destination="KR3-xZ-GUj" id="da1-fZ-3Gr"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Og4-Wi-Cfc">
                                             <connections>
                                                 <action selector="addVocaButton:" destination="KR3-xZ-GUj" id="2hD-dM-0YL"/>
@@ -383,7 +305,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cGx-4b-e5u"/>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="영어로 검색" id="jyu-fg-U59">
+                            <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="oNs-RU-Scu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="V3z-A3-Phl"/>
+                        <barButtonItem title="시험 시작" id="32V-tP-yV5">
+                            <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="rXc-bz-oUB" kind="show" id="hWy-wE-U5u"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SPX-IW-955"/>
+                        <barButtonItem title="한글로 검색" id="WfJ-As-pfD">
+                            <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="n7R-Cn-xLU" kind="show" id="U0d-QO-0WU"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="RlV-zd-rfu"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myEnglishTableView" destination="cYJ-4B-PaN" id="8tR-Iu-T69"/>
@@ -391,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSa-Cz-dBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="71"/>
+            <point key="canvasLocation" x="240.57971014492756" y="112.50000000000001"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="P5I-4C-EB6">
@@ -477,22 +421,26 @@
             <point key="canvasLocation" x="921.73913043478262" y="-736.60714285714278"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="mgI-fB-lxO">
+        <scene sceneID="E2y-HB-6tp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RVL-gU-Piq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="sIy-qm-WTh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qno-6W-xiD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dXV-AI-p5P">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z6P-Xg-j3z">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="LYD-PH-l4Y" kind="relationship" relationship="rootViewController" id="2n8-Y5-u1z"/>
+                        <segue destination="KR3-xZ-GUj" kind="relationship" relationship="rootViewController" id="jWy-JY-Ilm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bsZ-GO-4oL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8A-u8-McQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669.56521739130437" y="128.57142857142856"/>
+            <point key="canvasLocation" x="-739" y="113"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

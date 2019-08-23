@@ -21,6 +21,10 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
         readValues()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        opendb()
+        readValues()
+    }
     
     
     @IBAction func addVocaButton(_ sender: Any) {
@@ -33,9 +37,6 @@ class EnglishNoteViewController:UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    @IBAction func backButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count
     }

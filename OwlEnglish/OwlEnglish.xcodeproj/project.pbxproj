@@ -16,6 +16,7 @@
 		00179BFC22F55377000DD199 /* OwlEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00179BFB22F55377000DD199 /* OwlEnglishUITests.swift */; };
 		004222E323056C55005709B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004222E223056C55005709B4 /* MainViewController.swift */; };
 		00540AD522FCFCCC005CDC72 /* EnglishExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00540AD422FCFCCC005CDC72 /* EnglishExam.swift */; };
+		006115D6230FB753003D9297 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006115D5230FB753003D9297 /* SnapshotHelper.swift */; };
 		00D635DA22F6B814007362E1 /* TransDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D635D922F6B814007362E1 /* TransDatas.swift */; };
 		00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */; };
 		00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */; };
@@ -57,6 +58,7 @@
 		00179BFD22F55377000DD199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		004222E223056C55005709B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00540AD422FCFCCC005CDC72 /* EnglishExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishExam.swift; sourceTree = "<group>"; };
+		006115D5230FB753003D9297 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../SnapshotHelper.swift; sourceTree = "<group>"; };
 		00D635D922F6B814007362E1 /* TransDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDatas.swift; sourceTree = "<group>"; };
 		00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKorean.swift; sourceTree = "<group>"; };
 		00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishNoteViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		00179BFA22F55377000DD199 /* OwlEnglishUITests */ = {
 			isa = PBXGroup;
 			children = (
+				006115D5230FB753003D9297 /* SnapshotHelper.swift */,
 				00179BFB22F55377000DD199 /* OwlEnglishUITests.swift */,
 				00179BFD22F55377000DD199 /* Info.plist */,
 			);
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00179BFC22F55377000DD199 /* OwlEnglishUITests.swift in Sources */,
+				006115D6230FB753003D9297 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
