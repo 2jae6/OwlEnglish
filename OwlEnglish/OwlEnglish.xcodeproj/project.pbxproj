@@ -17,8 +17,8 @@
 		004222E323056C55005709B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004222E223056C55005709B4 /* MainViewController.swift */; };
 		00540AD522FCFCCC005CDC72 /* EnglishExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00540AD422FCFCCC005CDC72 /* EnglishExam.swift */; };
 		006115D6230FB753003D9297 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006115D5230FB753003D9297 /* SnapshotHelper.swift */; };
+		00773A6E231127A0000978E2 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00773A6D231127A0000978E2 /* SupportViewController.swift */; };
 		00D635DA22F6B814007362E1 /* TransDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D635D922F6B814007362E1 /* TransDatas.swift */; };
-		00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */; };
 		00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */; };
 		00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DCA4F022F98DBB00C464D8 /* Data.swift */; };
 		00EE3B6222FFE46000C2015D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EE3B6122FFE46000C2015D /* SecondViewController.swift */; };
@@ -59,8 +59,8 @@
 		004222E223056C55005709B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00540AD422FCFCCC005CDC72 /* EnglishExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishExam.swift; sourceTree = "<group>"; };
 		006115D5230FB753003D9297 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = ../../SnapshotHelper.swift; sourceTree = "<group>"; };
+		00773A6D231127A0000978E2 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		00D635D922F6B814007362E1 /* TransDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransDatas.swift; sourceTree = "<group>"; };
-		00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKorean.swift; sourceTree = "<group>"; };
 		00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishNoteViewController.swift; sourceTree = "<group>"; };
 		00DCA4F022F98DBB00C464D8 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		00EE3B6122FFE46000C2015D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -123,12 +123,12 @@
 				00179BE222F55377000DD199 /* Assets.xcassets */,
 				00179BE422F55377000DD199 /* LaunchScreen.storyboard */,
 				00179BE722F55377000DD199 /* Info.plist */,
-				00DCA4EC22F93A0E00C464D8 /* SearchKorean.swift */,
 				00DCA4EE22F98CE400C464D8 /* EnglishNoteViewController.swift */,
 				00DCA4F022F98DBB00C464D8 /* Data.swift */,
 				00540AD422FCFCCC005CDC72 /* EnglishExam.swift */,
 				00FEEE3323018CF300997FF0 /* DirectSave.swift */,
 				004222E223056C55005709B4 /* MainViewController.swift */,
+				00773A6D231127A0000978E2 /* SupportViewController.swift */,
 			);
 			path = OwlEnglish;
 			sourceTree = "<group>";
@@ -285,13 +285,13 @@
 			files = (
 				00EE3B6222FFE46000C2015D /* SecondViewController.swift in Sources */,
 				00179BDE22F55376000DD199 /* ViewController.swift in Sources */,
+				00773A6E231127A0000978E2 /* SupportViewController.swift in Sources */,
 				00FEEE3423018CF300997FF0 /* DirectSave.swift in Sources */,
 				00DCA4F122F98DBB00C464D8 /* Data.swift in Sources */,
 				00179BDC22F55376000DD199 /* AppDelegate.swift in Sources */,
 				00DCA4EF22F98CE400C464D8 /* EnglishNoteViewController.swift in Sources */,
 				00540AD522FCFCCC005CDC72 /* EnglishExam.swift in Sources */,
 				00D635DA22F6B814007362E1 /* TransDatas.swift in Sources */,
-				00DCA4ED22F93A0E00C464D8 /* SearchKorean.swift in Sources */,
 				004222E323056C55005709B4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
