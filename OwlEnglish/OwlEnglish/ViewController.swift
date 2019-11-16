@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         present(alert, animated: false, completion: nil)
     }
     //API 불러오기
+    
     func callURL(){
         
         let text = searchText.text!
@@ -100,6 +101,7 @@ class ViewController: UIViewController {
         
         task.resume()
     }
+    
     //DB열기
     func opendb(){
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("MyEnglishDatabase.sqlite")
