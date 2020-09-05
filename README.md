@@ -3,7 +3,10 @@ English Dictionary
  ### 이름
  * 부엉이 영단어
  
- ![Github logo](/logo.png) 
+ ![Github logo](/게으른부엉이.png)
+ ![Github logo](/1.png)
+ ![Github logo](/2.png)
+ ![Github logo](/3.png)
 
 
 # Project Information
